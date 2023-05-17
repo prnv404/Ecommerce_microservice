@@ -75,7 +75,7 @@ export const ProductApi = (app: Express, channel: amqplib.Channel) => {
     res.status(200).json(data.data.product);
   });
 
-  app.delete("/wishlist/:id", UserAuth, async (req, res, next) => {
+  app.delete("/wishlist/:id", UserAuth, async (req: Request, res: Response, next: NextFunction) => {
 
     const request = req as ValidateRequest
 
