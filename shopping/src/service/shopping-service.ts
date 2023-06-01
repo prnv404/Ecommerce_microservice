@@ -1,7 +1,6 @@
 import { ShoppingRepository } from "../database";
 import { FormateData } from "../utils";
 
-// All Business logic will be here
 export class ShoppingService {
 
     private repository : ShoppingRepository
@@ -14,6 +13,7 @@ export class ShoppingService {
         
         const cartItems = await this.repository.Cart(_id);
         return FormateData(cartItems);
+
     }
 
 
@@ -78,7 +78,6 @@ export class ShoppingService {
        }
 
    }
-
  
 
 }
